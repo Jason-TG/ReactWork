@@ -1,0 +1,22 @@
+import React from "react";
+
+function App(props) {
+  const [num, setNum] = useState(1);
+
+  /*
+ 함수를 선언할 때는  
+const abc = () => {
+};
+의 형태로 하는 것이 좋다. 
+ */
+
+  return (
+    <div>
+      숫자 : {num}
+      <button onClick={() => setNum(num_1)}> + </button>
+      <button> - </button>
+    </div>
+  );
+}
+
+export default App;
