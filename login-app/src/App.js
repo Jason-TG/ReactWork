@@ -11,10 +11,8 @@ function App() {
   return (
     <div>
       <Header />
-      <NavTest />
-      <Button> 버튼 </Button>
-      <Button> 그냥 버튼 </Button>
       <Route path="/" exact={true} component={HomePage} />
+      <Route path="/user" exact={true} component={UserPage} />
       <Route path="/user" exact={true} component={UserPage} />
     </div>
   );

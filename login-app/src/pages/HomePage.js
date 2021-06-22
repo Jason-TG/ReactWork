@@ -12,12 +12,15 @@ const HomePage = () => {
   useEffect(() => {
     fetch("http://localhost:8080/user/1")
       // const user = fetch('http://localhost:8080/user/1');
-      .then((res) => res.json())
+      .then((res) => res.text())
       .then((res) => {
+        console.log("통신 성공");
         console.log(res);
         setUser(res);
       })
       .catch((error) => {
+        // then 내부에서 실패하면 발생
+        console.log("에러 발생함");
         console.log(error);
       });
   }, []);
